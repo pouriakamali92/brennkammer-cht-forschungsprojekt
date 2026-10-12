@@ -57,3 +57,35 @@ Das Referenznetz weicht ≈ 1,73 % vom groben und ≈ 1,54 % vom feinen Netz ab 
 Dieses Repository dokumentiert Vorgehen und Ergebnisse. Fluent-Case- und Datendateien sind aufgrund ihrer Größe und der Institutszugehörigkeit nicht enthalten.
 
 Portfolio mit Abbildungen: <https://pouria-kamali.de/projekt-brennkammer.php>
+
+## Abbildungen
+
+### Temperaturkonturen
+
+Kontur der statischen Temperatur (Skala 300 bis 1.600 K) im 90°-Viertelmodell, Ansys Fluent 2024 R2. Je Spaltweite (3 / 5 / 7 mm) und Kühlluftgeschwindigkeit (10 / 20 / 30 m/s) liegen drei Schnittebenen bei 50, 250 und 450 mm vor.
+
+![Temperaturkontur, Spalt 7 mm, 10 m/s, Schnittebene 250 mm](images/konturen/7mm_10ms_250mm.png)
+
+| Spalt | Luft | 50 mm | 250 mm | 450 mm |
+|---|---|---|---|---|
+| 3 mm | 10 m/s | [Bild](images/konturen/3mm_10ms_50mm.png) | [Bild](images/konturen/3mm_10ms_250mm.png) | [Bild](images/konturen/3mm_10ms_450mm.png) |
+| 3 mm | 20 m/s | [Bild](images/konturen/3mm_20ms_50mm.png) | [Bild](images/konturen/3mm_20ms_250mm.png) | [Bild](images/konturen/3mm_20ms_450mm.png) |
+| 3 mm | 30 m/s | [Bild](images/konturen/3mm_30ms_50mm.png) | [Bild](images/konturen/3mm_30ms_250mm.png) | [Bild](images/konturen/3mm_30ms_450mm.png) |
+| 5 mm | 10 m/s | [Bild](images/konturen/5mm_10ms_50mm.png) | [Bild](images/konturen/5mm_10ms_250mm.png) | [Bild](images/konturen/5mm_10ms_450mm.png) |
+| 5 mm | 20 m/s | [Bild](images/konturen/5mm_20ms_50mm.png) | [Bild](images/konturen/5mm_20ms_250mm.png) | [Bild](images/konturen/5mm_20ms_450mm.png) |
+| 5 mm | 30 m/s | [Bild](images/konturen/5mm_30ms_50mm.png) | [Bild](images/konturen/5mm_30ms_250mm.png) | [Bild](images/konturen/5mm_30ms_450mm.png) |
+| 7 mm | 10 m/s | [Bild](images/konturen/7mm_10ms_50mm.png) | [Bild](images/konturen/7mm_10ms_250mm.png) | [Bild](images/konturen/7mm_10ms_450mm.png) |
+| 7 mm | 20 m/s | [Bild](images/konturen/7mm_20ms_50mm.png) | [Bild](images/konturen/7mm_20ms_250mm.png) | [Bild](images/konturen/7mm_20ms_450mm.png) |
+| 7 mm | 30 m/s | [Bild](images/konturen/7mm_30ms_50mm.png) | [Bild](images/konturen/7mm_30ms_250mm.png) | [Bild](images/konturen/7mm_30ms_450mm.png) |
+
+### Temperatur auf der Mittelachse
+
+Temperaturverlauf entlang der Mittelachse für 10 / 20 / 30 m/s, je Spaltweite:
+
+| 3 mm | 5 mm | 7 mm |
+|---|---|---|
+| ![3 mm](images/mittelachse/mittelachse_3mm.png) | ![5 mm](images/mittelachse/mittelachse_5mm.png) | ![7 mm](images/mittelachse/mittelachse_7mm.png) |
+
+## Skripte
+
+`scripts/temperatur_mittelachse.m` liest die aus Fluent exportierten Mittelachsen-Daten (Textdateien) ein, sortiert sie nach der Achsenkoordinate und plottet die drei Geschwindigkeiten. Die Rohdaten sind nicht enthalten.
